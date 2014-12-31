@@ -1,5 +1,6 @@
 package stock;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 
 import produit.Produit;
@@ -64,6 +65,12 @@ public class StockListe extends Stock {
 	@Override
 	public Produit iemeElement(int i) {
 		return content.get(i);
+	}
+
+
+	@Override
+	public Iterator<Produit> iterator() {
+		return content.iterator();
 	}
 
 }

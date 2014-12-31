@@ -1,5 +1,7 @@
 package stock;
 
+import java.util.Iterator;
+
 import produit.Produit;
 
 /**
@@ -88,6 +90,12 @@ public class StockTableau extends Stock {
 	public Produit iemeElement(int i) {
 		// TODO Auto-generated method stub
 		return content[i];
+	}
+
+	@Override
+	public Iterator<Produit> iterator() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

@@ -1,5 +1,7 @@
 package stock;
 
+import java.util.Iterator;
+
 import produit.Produit;
 
 /**
@@ -34,10 +36,9 @@ public abstract class Stock {
 	 */ 
 	public String toString() {
 		String result = "[";
-		if (!isEmpty()) {
-			for(int i = 0; i < size; ++i){
-				result += iemeElement(i) + ";";
-			}
+		Iterator<Produit> it = iterator();
+		while(it.hasNext()) {
+			result += it.next();
 		}
 
 		return result + "]";
@@ -66,4 +67,5 @@ public abstract class Stock {
 	 */
 	public abstract boolean isFull(); 
 	public abstract Produit iemeElement(int i);
+	public abstract Iterator <Produit> iterator() ;
 }
