@@ -17,18 +17,6 @@ public class StockListe extends Stock {
 		nbMax = s;
 	}
 
-	@Override
-	public String toString() {
-		String result = "[";
-		if (!isEmpty()) {
-			for(Produit p : content){
-				result += p + ";";
-			}
-		}
-
-		return result + "]";
-	}
-
 
 	@Override
 	public void add(Produit p) throws ProduitNull, StockFull {
@@ -71,6 +59,11 @@ public class StockListe extends Stock {
 	public boolean isFull() {
 		// TODO Auto-generated method stub
 		return size == nbMax;
+	}
+
+	@Override
+	public Produit iemeElement(int i) {
+		return content.get(i);
 	}
 
 }

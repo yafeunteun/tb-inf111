@@ -16,44 +16,54 @@ import produit.Produit;
  * @version 0.2
  */
 public abstract class Stock {
-   
-  protected int size = 0;
-   
-  /**
-   * indique si je suis vide
-   */
-  public boolean isEmpty() { return size == 0; }
-  
-  /**
-   * retourne le nombre d'elements presents dans le Stock
-   */
-  public int getSize() { return size ; }
 
-  /**
-   *  Rend une chaine qui decrit chaque element present dans le Stock
-   */ 
-  public abstract String toString();
-  
-  /**
-   * ajoute un produit et leve l'exception StockFull si le stock est plein 
-   * @param p le produit ajoute
-   */
-  public abstract void add(Produit p) throws ProduitNull, StockFull;
-  
-  /**
-   * retire un produit, et leve l'exception StockEmpty si le stock est vide 
-   */
-  public abstract Produit remove() throws StockEmpty; 
-   
-  /**
-   * retire un produit, et leve l'exception StockEmpty si le stock est vide 
-   * @param p le produit a retirer
-   * @return true si le produit existait dans le stock et false autrement
-   */
-  public abstract boolean remove(Produit p) throws ProduitNull, StockEmpty; 
-   
-  /**
-   * indique si je suis plein
-   */
-  public abstract boolean isFull(); 
+	protected int size = 0;
+
+	/**
+	 * indique si je suis vide
+	 */
+	public boolean isEmpty() { return size == 0; }
+
+	/**
+	 * retourne le nombre d'elements presents dans le Stock
+	 */
+	public int getSize() { return size ; }
+
+	/**
+	 *  Rend une chaine qui decrit chaque element present dans le Stock
+	 */ 
+	public String toString() {
+		String result = "[";
+		if (!isEmpty()) {
+			for(int i = 0; i < size; ++i){
+				result += iemeElement(i) + ";";
+			}
+		}
+
+		return result + "]";
+	}
+
+	/**
+	 * ajoute un produit et leve l'exception StockFull si le stock est plein 
+	 * @param p le produit ajoute
+	 */
+	public abstract void add(Produit p) throws ProduitNull, StockFull;
+
+	/**
+	 * retire un produit, et leve l'exception StockEmpty si le stock est vide 
+	 */
+	public abstract Produit remove() throws StockEmpty; 
+
+	/**
+	 * retire un produit, et leve l'exception StockEmpty si le stock est vide 
+	 * @param p le produit a retirer
+	 * @return true si le produit existait dans le stock et false autrement
+	 */
+	public abstract boolean remove(Produit p) throws ProduitNull, StockEmpty; 
+
+	/**
+	 * indique si je suis plein
+	 */
+	public abstract boolean isFull(); 
+	public abstract Produit iemeElement(int i);
 }
