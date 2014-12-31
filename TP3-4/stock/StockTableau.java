@@ -95,7 +95,25 @@ public class StockTableau extends Stock {
 	@Override
 	public Iterator<Produit> iterator() {
 		// TODO Auto-generated method stub
-		return null;
+		return new IterInterneTableau();
+	}
+	
+	private class IterInterneTableau implements Iterator<Produit> {
+
+		private int currIndex = 0;
+		@Override
+		public boolean hasNext() {
+			if (currIndex < size && content[currIndex] != null) {
+				return true;
+			}
+			return false;
+		}
+
+		@Override
+		public Produit next() {
+			return content[currIndex++];
+		}
+		
 	}
 
 }
