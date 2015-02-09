@@ -1,6 +1,8 @@
    package registre;
 
    import date.DateFrancaise;
+import java.util.Collection;
+import java.util.Iterator;
 
 
 /**
@@ -9,7 +11,10 @@
  */
     public class Registre {
    
-      private String nom;
+      /**
+	 * @uml.property  name="nom"
+	 */
+    private String nom;
    
    
    
@@ -52,6 +57,12 @@
        public Personne saisirPersonne() {
          return null;
       }
+
+	/** 
+	 * @uml.property name="personne"
+	 * @uml.associationEnd multiplicity="(0 -1)" inverse="registre:registre.Personne"
+	 */
+	private Collection personne;
    
    
    }

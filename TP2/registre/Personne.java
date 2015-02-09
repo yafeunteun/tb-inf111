@@ -9,19 +9,42 @@ import date.DateFrancaise;
  */
     public class Personne {
    
-      private String nom;
+      /**
+	 * @uml.property  name="nom"
+	 */
+    private String nom;
    
-      private String prenom;
+      /**
+	 * @uml.property  name="prenom"
+	 */
+    private String prenom;
    
-      private char sexe;
+      /**
+	 * @uml.property  name="sexe"
+	 */
+    private char sexe;
    
-      private String communeNaissance;
+      /**
+	 * @uml.property  name="communeNaissance"
+	 */
+    private String communeNaissance;
    
-      private DateFrancaise dateNaissance;
+      /**
+	 * @uml.property  name="dateNaissance"
+	 * @uml.associationEnd  readOnly="true"
+	 */
+    private DateFrancaise dateNaissance;
    
-      private DateFrancaise dateDeces;
+      /**
+	 * @uml.property  name="dateDeces"
+	 * @uml.associationEnd  readOnly="true"
+	 */
+    private DateFrancaise dateDeces;
    
-      private int numero;
+      /**
+	 * @uml.property  name="numero"
+	 */
+    private int numero;
    
       private static int dernierNumero = 0;
    
@@ -32,6 +55,12 @@ import date.DateFrancaise;
    
        public Personne(String nom, String prenom,  char sexe,  DateFrancaise dateNaissance, String communeNaissance) {
       }
+
+	/** 
+	 * @uml.property name="registre"
+	 * @uml.associationEnd inverse="personne:registre.Registre"
+	 */
+	private Registre registre;
    
    
    }

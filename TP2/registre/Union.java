@@ -11,11 +11,22 @@ import java.util.Collection;
  */
 public class Union {
 
+	/**
+	 * @uml.property  name="numero"
+	 */
 	private int numero;
 
 
+	/**
+	 * @uml.property  name="dateUnion"
+	 * @uml.associationEnd  readOnly="true"
+	 */
 	private DateFrancaise dateUnion;
 
+	/**
+	 * @uml.property  name="dateSeparation"
+	 * @uml.associationEnd  readOnly="true"
+	 */
 	private DateFrancaise dateSeparation;
 
 	private static int dernierNumero = 0;
