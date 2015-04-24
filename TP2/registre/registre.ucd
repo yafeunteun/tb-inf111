@@ -22,7 +22,7 @@
     </sourceConnections>
     <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="registre/Personne@personne+registre/Registre@registre" source="//@children.0" target="//@children.2" targetEnd="//@children.0/@sourceConnections.1/@children.1" label="//@children.0/@sourceConnections.1/@children.2" sourceEnd="//@children.0/@sourceConnections.1/@children.0" connectionRouterKind="Manhattan">
       <children xsi:type="editmodel:AssociationEndEditModel" name="registre" location="0,46" id="registre/Personne@personne+registre/Registre@registre|registre/Registre#registre" attachSource="true" multiplicityLabel="//@children.0/@sourceConnections.1/@children.0/@children.1" roleLabel="//@children.0/@sourceConnections.1/@children.0/@children.0" navigable="true">
-        <children xsi:type="editmodel:LabelEditModel" name=" - registre" location="378,239" size="35,10" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="- registre" location="380,239" size="33,10" anchorKind="FirstPart"/>
         <children xsi:type="editmodel:LabelEditModel" name="0..1" location="399,263" size="14,10" anchorKind="FirstPart"/>
       </children>
       <children xsi:type="editmodel:AssociationEndEditModel" name="personne" location="89,84" id="registre/Personne@personne+registre/Registre@registre|registre/Personne#personne" multiplicityLabel="//@children.0/@sourceConnections.1/@children.1/@children.1" roleLabel="//@children.0/@sourceConnections.1/@children.1/@children.0" navigable="true">

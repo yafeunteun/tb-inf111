@@ -1,11 +1,9 @@
-
-
 public class Producteur {
 
 	private String name;
 	private Stock stock;
 
-	public Producteur(String pName, Stock pStock){
+	public Producteur(String pName, Stock pStock) {
 		this.name = pName;
 		this.stock = pStock;
 	}
